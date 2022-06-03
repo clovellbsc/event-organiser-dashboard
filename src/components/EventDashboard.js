@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import TicketTotal from "./TicketTotal";
 
 const EventDashboard = ({ data }) => {
   const { eventId } = useParams();
@@ -18,7 +19,12 @@ const EventDashboard = ({ data }) => {
 
   return (
     <div className="home-screen">
-      <h2>Start List Entries for {eventName}</h2>
+      <div>
+        <h2>Start List Entries for {eventName}</h2>
+      </div>
+      <div>
+        <TicketTotal dataFilter={filterDataByEvent()} />
+      </div>
     </div>
   );
 };

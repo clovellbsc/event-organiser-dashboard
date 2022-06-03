@@ -2,7 +2,8 @@ import "../styling/App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import OrganisersHomePage from "./OrganisersHomePage";
 import { data } from "../data";
-import OrganiserDashboard from "../components/OrganiserDashboard";
+import OrganiserDashboard from "./OrganiserDashboard";
+import EventDashboard from "./EventDashboard";
 
 const App = () => {
   const allOrganisers = () => {
@@ -35,6 +36,10 @@ const App = () => {
           element={
             <OrganiserDashboard data={data} organisersList={allOrganisers()} />
           }
+        />
+        <Route
+          path="/event/:eventId"
+          element={<EventDashboard data={data} />}
         />
       </Routes>
     </Router>

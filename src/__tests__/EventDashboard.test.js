@@ -88,3 +88,9 @@ test("renders the header", () => {
   const title = screen.getByText("Start List Entries for The Great North Run");
   expect(title).toBeInTheDocument();
 });
+
+test("renders the ticket total", () => {
+  render(<EventDashboard data={data} />);
+  const total = screen.getByText("Total Ticket Sales: £4300");
+  expect(total).toBeInTheDocument();
+});
