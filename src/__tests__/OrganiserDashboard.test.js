@@ -1,5 +1,4 @@
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import OrganiserDashboard from "../components/OrganiserDashboard";
 
 jest.mock("react-router-dom", () => ({
@@ -143,6 +142,12 @@ test("renders the header", () => {
   render(<OrganiserDashboard data={data} organisersList={organiserList} />);
   const title = screen.getByText("Start List Entries for Great Run");
   expect(title).toBeInTheDocument();
+});
+
+test("renders the ticket total", () => {
+  render(<OrganiserDashboard data={data} organisersList={organiserList} />);
+  const total = screen.getByText("Total Ticket Sales: £4300");
+  expect(total).toBeInTheDocument();
 });
 
 test("renders one event when only one data entry", () => {
