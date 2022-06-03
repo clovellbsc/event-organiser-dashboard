@@ -1,8 +1,8 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import App from "../components/App.js";
+import { render, screen } from "@testing-library/react";
 
-test('renders learn react link', () => {
+test("renders header", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const header = screen.getByText("Let's Do This Event Management");
+  expect(header).toBeInTheDocument();
 });
