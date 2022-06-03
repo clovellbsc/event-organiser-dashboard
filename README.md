@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Event Organiser Dashboard
+<img width="839" alt="event-organiser-management-hompage" src="https://user-images.githubusercontent.com/93338557/171903905-9f1ff256-bf26-4bca-b6f6-9c02322a587d.png">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Client Specification
 
-## Available Scripts
+You have been asked to build a dashboard that makes it easy for for organisers to view race startlist entries and ticket sale revenue.
 
-In the project directory, you can run:
+1. It must be possible for organisers to apply a filter so that they can see only their startlist entries.
+2. It must also be possible for each organiser to see how much they have made in ticket sales.
 
-### `npm start`
+If you have time, you have also been given the opportunity to build in one other feature you think will be useful for our event organisers. As an engineer at Let’s Do This, you are heavily involved in all parts of a product’s development, so in addition to testing your coding ability, we also want to see how you think about engineering in the context of a broader product. Hence, we’re giving you some space to build something you think might be useful.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Some questions that might be helpful to consider:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- What do other products in this space usually do?
+- How much time will your proposed features likely take you to implement? Do you have enough time? If not, is there a simpler way to give a user 80% of the experience?
 
-### `npm test`
+## Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Copy the following code into your terminal and hit enter
 
-### `npm run build`
+```
+https://github.com/clovellbsc/event-organiser-dashboard.git
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Change directory into the project by copying the following code into your terminal and hitting enter
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+cd event-organiser-dashboard
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
