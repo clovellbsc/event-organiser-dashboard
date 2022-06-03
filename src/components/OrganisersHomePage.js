@@ -28,7 +28,7 @@ const OrganisersHomePage = ({ organisersList }) => {
   });
 
   return (
-    <div className="home-screen">
+    <div className="home-screen centre">
       <div className="searchbar">
         <input
           type="text"

@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/no-node-access */
 import { render, screen } from "@testing-library/react";
 import OrganisersHomePage from "../components/OrganisersHomePage";
 import userEvent from "@testing-library/user-event";

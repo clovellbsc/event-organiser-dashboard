@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import StartListEntry from "./StartListEntry";
 import TicketTotal from "./TicketTotal";
+import "../styling/EventDashboard.css";
 
 const EventDashboard = ({ data }) => {
   const { eventId } = useParams();
@@ -28,7 +29,7 @@ const EventDashboard = ({ data }) => {
   }, []);
 
   return (
-    <div className="home-screen">
+    <div className="home-screen centre">
       <div>
         <h2>Start List Entries for {eventName}</h2>
       </div>

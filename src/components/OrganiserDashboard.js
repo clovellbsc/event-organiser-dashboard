@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import TicketTotal from "./TicketTotal";
+import "../styling/OrganiserDashboard.css";
 
 const OrganiserDashboard = ({ data, organisersList }) => {
   const { organiserId } = useParams();
@@ -49,7 +50,7 @@ const OrganiserDashboard = ({ data, organisersList }) => {
   };
 
   return (
-    <div className="home-screen">
+    <div className="home-screen centre">
       <div>Start List Entries for {organiser}</div>
       <div>
         <TicketTotal dataFilter={filterDataByOrganiser()} />

@@ -23,9 +23,11 @@ const App = () => {
 
   return (
     <Router>
-      <a href="/">
-        <h1>Let's Do This Event Management</h1>
-      </a>
+      <div className="centre">
+        <a href="/">
+          <h1>Let's Do This Event Management</h1>
+        </a>
+      </div>
       <Routes>
         <Route
           path="/"
