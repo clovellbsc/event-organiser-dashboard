@@ -45,8 +45,6 @@ test("href testing for all organisers", () => {
   const runThrough = screen.getByText("RunThrough");
   const limelight = screen.getByText("Limelight Sports Club");
 
-  userEvent.click(greatRun);
-
   expect(greatRun.closest("a")).toHaveAttribute("href", "/organiser/26391");
   expect(runThrough.closest("a")).toHaveAttribute("href", "/organiser/69173");
   expect(limelight.closest("a")).toHaveAttribute("href", "/organiser/154979");

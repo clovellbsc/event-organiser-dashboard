@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import OrganiserDashboard from "../components/OrganiserDashboard";
 
 jest.mock("react-router-dom", () => ({
@@ -167,4 +168,21 @@ test("renders multiple organisers when two data entries with different organiser
   );
   const startListEntries = screen.getAllByRole("listitem");
   expect(startListEntries.length).toBe(2);
+});
+
+test("href testing for all organisers", () => {
+  render(
+    <OrganiserDashboard
+      data={multipleEventData}
+      organisersList={organiserList}
+    />
+  );
+  const greatNorthRun = screen.getByText("The Great North Run");
+  const greatManchesterRun = screen.getByText("Great Manchester Run");
+
+  expect(greatNorthRun.closest("a")).toHaveAttribute("href", "/event/18414");
+  expect(greatManchesterRun.closest("a")).toHaveAttribute(
+    "href",
+    "/event/11120243"
+  );
 });
