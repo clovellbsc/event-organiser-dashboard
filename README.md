@@ -29,3 +29,65 @@ Change directory into the project by copying the following code into your termin
 cd event-organiser-dashboard
 ```
 
+## Ensuring Dependencies Are Installed
+
+If you do not have node installed on your device you can go to the [NPM documentation](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm "NPM documentation")
+
+If/once you have node installed on your device copy the following code into your terminal and hit enter
+
+```
+npm install
+```
+
+## Running The Application
+
+Once you are ready to use the application type the following and hit enter
+```
+npm start
+```
+
+This should open the application in your browser at which point, you can click in the searchbar and search for an organiser:
+
+https://user-images.githubusercontent.com/93338557/171904930-65d005c5-a6c2-45e1-a58e-cd22070f438e.mp4
+
+You can click on any of the organisers to enter the organiser specific dashboard, which will dispaly the list of events and the total ticket sales. You can also use the logo to re-route to the home page:
+
+https://user-images.githubusercontent.com/93338557/171905638-7741d783-65b8-4e9a-88b3-70403b7086ff.mp4
+
+Clicking on a specified event will bring up all start list entries for that event and will also render the total ticket sales for the specified event:
+
+https://user-images.githubusercontent.com/93338557/171906392-a3ae32bf-c1b7-43f0-a303-944575eaac8d.mp4
+
+
+## Running Tests
+
+This project has been tested with the React testing library and Jest. To run the tests you can copy the following into your terminal and hit enter:
+```
+npm test
+```
+
+when this has loaded it will provide you with the following options:
+
+<img width="287" alt="react test" src="https://user-images.githubusercontent.com/93338557/170873311-777a5410-0459-4af2-9704-0cf3ddc2afdd.png">
+
+To run all the tests type:
+```
+a
+```
+
+This will run all the tests and produce a result like this: 
+
+<img width="325" alt="react test for event management dashboard" src="https://user-images.githubusercontent.com/93338557/171906874-e356dd81-723a-4c8c-901f-a2a1e22701ed.png">
+
+To run the tests with coverage, you can copy the following code:
+```
+npm test -- --coverage .
+```
+
+## Technologies Used
+
+- JavaScript - chosen programming language
+- Git - version control
+- React - front-end JavaScript library
+- Jest - unit and feature testing, including coverage
+- React Testing Library - library for testing React applications, which focuses on testing components from the end-user's experience
