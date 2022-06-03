@@ -1,8 +1,13 @@
+import React, { useState, useEffect } from "react";
+
 const OrganisersHomePage = ({ organisersList }) => {
   const formattedOrganisers = organisersList.map((company) => {
+    const url = `/organiser/${company.id}`;
     return (
       <li key={company.id}>
-        <h2>{company.name}</h2>
+        <a href={url}>
+          <h2>{company.name}</h2>
+        </a>
       </li>
     );
   });

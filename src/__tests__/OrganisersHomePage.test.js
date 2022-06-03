@@ -1,5 +1,6 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import OrganisersHomePage from "../components/OrganisersHomePage";
+import userEvent from "@testing-library/user-event";
 
 const organiser = [{ id: 26391, name: "Great Run" }];
 
@@ -36,4 +37,17 @@ test("multiple organisers are found on page", () => {
   expect(greatRun).toBeInTheDocument();
   expect(runThrough).toBeInTheDocument();
   expect(limelight).toBeInTheDocument();
+});
+
+test("href testing for all organisers", () => {
+  render(<OrganisersHomePage organisersList={organiserList} />);
+  const greatRun = screen.getByText("Great Run");
+  const runThrough = screen.getByText("RunThrough");
+  const limelight = screen.getByText("Limelight Sports Club");
+
+  userEvent.click(greatRun);
+
+  expect(greatRun.closest("a")).toHaveAttribute("href", "/organiser/26391");
+  expect(runThrough.closest("a")).toHaveAttribute("href", "/organiser/69173");
+  expect(limelight.closest("a")).toHaveAttribute("href", "/organiser/154979");
 });
