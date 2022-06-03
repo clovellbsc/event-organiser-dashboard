@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background: whitesmoke;
+  border-radius: 25px;
+  opacity: 0.9;
+  text-align: center;
+  margin: 10;
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ticket-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}

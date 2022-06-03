@@ -94,3 +94,15 @@ test("renders the ticket total", () => {
   const total = screen.getByText("Total Ticket Sales: £4300");
   expect(total).toBeInTheDocument();
 });
+
+test("renders one starlist entry components", () => {
+  render(<EventDashboard data={data} />);
+  const startListEntries = screen.getAllByRole("listitem");
+  expect(startListEntries.length).toBe(1);
+});
+
+test("renders the correct number of starlist entry components", () => {
+  render(<EventDashboard data={multipleData} />);
+  const startListEntries = screen.getAllByRole("listitem");
+  expect(startListEntries.length).toBe(2);
+});
