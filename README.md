@@ -114,3 +114,4 @@ Should I have had more time to work on this project there are a number of featur
 - I would have implemented full end to end testing utilising Cypress, however, due to issues with Cypress and React 18 as well as having very recently switched to using a Windows PC using Ubuntu on Windows Sub Linux, I did not have sufficient time to fix the bugs occurring on my machine
 - I would have implemented the ability for the user to add, update and delete events and start list entries directly on the website
 - Further extension could have come by implementing user authentication
+- Further styling and CSS would be added to ensure a clean User Interface
