@@ -2,6 +2,7 @@ import "../styling/App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import OrganisersHomePage from "./OrganisersHomePage";
 import { data } from "../data";
+import OrganiserDashboard from "../components/OrganiserDashboard";
 
 const App = () => {
   const allOrganisers = () => {
@@ -28,6 +29,12 @@ const App = () => {
         <Route
           path="/"
           element={<OrganisersHomePage organisersList={allOrganisers()} />}
+        />
+        <Route
+          path="/organiser/:organiserId"
+          element={
+            <OrganiserDashboard data={data} organisersList={allOrganisers()} />
+          }
         />
       </Routes>
     </Router>
