@@ -39,6 +39,66 @@ test("multiple organisers are found on page", () => {
   expect(limelight).toBeInTheDocument();
 });
 
+test("renders a searchbar", () => {
+  render(<OrganisersHomePage organisersList={organiserList} />);
+  const searchbar = screen.getByPlaceholderText(
+    "Enter the name of the event organiser"
+  );
+
+  expect(searchbar).toBeInTheDocument();
+});
+
+test("when an organiser is typed, it is found on the page but others aren't", () => {
+  render(<OrganisersHomePage organisersList={organiserList} />);
+  const searchbar = screen.getByPlaceholderText(
+    "Enter the name of the event organiser"
+  );
+
+  const greatRun = screen.getByText("Great Run");
+  const runThrough = screen.getByText("RunThrough");
+  const limelight = screen.getByText("Limelight Sports Club");
+
+  userEvent.type(searchbar, "Great Run");
+
+  expect(greatRun).toBeInTheDocument();
+  expect(runThrough).not.toBeInTheDocument();
+  expect(limelight).not.toBeInTheDocument();
+});
+
+test("searching is not case-sensitive", () => {
+  render(<OrganisersHomePage organisersList={organiserList} />);
+  const searchbar = screen.getByPlaceholderText(
+    "Enter the name of the event organiser"
+  );
+
+  const greatRun = screen.getByText("Great Run");
+  const runThrough = screen.getByText("RunThrough");
+  const limelight = screen.getByText("Limelight Sports Club");
+
+  userEvent.type(searchbar, "great run");
+
+  expect(greatRun).toBeInTheDocument();
+  expect(runThrough).not.toBeInTheDocument();
+  expect(limelight).not.toBeInTheDocument();
+});
+
+test("searching returns partial matches", () => {
+  render(<OrganisersHomePage organisersList={organiserList} />);
+  const searchbar = screen.getByPlaceholderText(
+    "Enter the name of the event organiser"
+  );
+
+  const greatRun = screen.getByText("Great Run");
+  const runThrough = screen.getByText("RunThrough");
+  const limelight = screen.getByText("Limelight Sports Club");
+
+  userEvent.type(searchbar, "run");
+
+  expect(greatRun).toBeInTheDocument();
+  expect(runThrough).toBeInTheDocument();
+  expect(limelight).not.toBeInTheDocument();
+});
+
 test("href testing for all organisers", () => {
   render(<OrganisersHomePage organisersList={organiserList} />);
   const greatRun = screen.getByText("Great Run");
