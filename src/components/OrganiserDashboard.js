@@ -37,7 +37,10 @@ const OrganiserDashboard = ({ data, organisersList }) => {
 
   const entriesByOrganiser = () => {
     const organiserSpecificData = allEventsByOrganiser();
-    return organiserSpecificData.map((entry, index) => {
+    const sortedData = organiserSpecificData.sort((a, b) =>
+      a.name <= b.name ? -1 : 1
+    );
+    return sortedData.map((entry, index) => {
       const url = `/event/${entry.id}`;
       return (
         <li key={index}>
